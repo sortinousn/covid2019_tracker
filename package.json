@@ -12,6 +12,7 @@
     "react-dom": "^16.13.0",
     "react-leaflet": "^2.6.1",
     "react-leaflet-heatmap-layer": "^2.0.0",
+    "react-leaflet-marker-layer": "^0.1.4",
     "react-scripts": "3.4.0"
   },
   "scripts": {

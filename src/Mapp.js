@@ -19,7 +19,9 @@ function Mapp() {
       .get("https://coronavirus-tracker-api.herokuapp.com/confirmed")
       .then(res => {
         const rawdata = res.data.locations;
+        const totalInfected = res.data.latest;
         var result = [];
+        console.log(totalInfected);
         const map1 = rawdata.map(data => data.coordinates);
         for (var i in map1) result.push([map1[i].lat, map1[i].long]);
         setData(result);
@@ -36,6 +38,7 @@ function Mapp() {
         longitudeExtractor={m => m[1]}
         latitudeExtractor={m => m[0]}
         intensityExtractor={m => parseFloat(m[2])}
+        radius={10}
       />
       <TileLayer
         url="http://tile.stamen.com/toner/{z}/{x}/{y}.png"
