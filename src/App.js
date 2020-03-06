@@ -6,6 +6,9 @@ import HeatmapLayer from "react-leaflet-heatmap-layer";
 import { Map, Marker, Popup, TileLayer } from "react-leaflet";
 import { addressPoints } from "./realworld.10000.js";
 import { isCompositeComponent } from "react-dom/test-utils";
+import { Navbar } from "react-bootstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
+import Logo from "./Biohazard.png";
 
 function App() {
   const style = {
@@ -32,7 +35,20 @@ function App() {
   }, []);
 
   return (
-    <div>
+    <div className="containerbox">
+      <Navbar bg="dark" variant="dark">
+        <Navbar.Brand href="/">
+          <img
+            alt=""
+            src={Logo}
+            width="30"
+            height="30"
+            className="d-inline-block align-top"
+          />
+          {"     "}
+          Coronavirus Daily Tracker 2020
+        </Navbar.Brand>
+      </Navbar>
       <div className="mapdiv">
         <Map style={style} center={[49.4, 24.7]} zoom={3}>
           <HeatmapLayer
@@ -48,11 +64,11 @@ function App() {
             url="http://tile.stamen.com/toner/{z}/{x}/{y}.png"
             attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
           />
-        </Map>{" "}
+        </Map>
       </div>
       <div class="flex-container">
         <div>
-          <h3>Total Infected</h3>
+          <h4>Total Infected</h4>
           {infected}
         </div>
       </div>
