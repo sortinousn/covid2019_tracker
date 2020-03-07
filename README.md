@@ -3,4 +3,10 @@
 
 In the project directory, you can run:
 
-### `yarn start`
+### `yarn install` then  `yarn start`
+
+
+
+![screenshot]("https://imgur.com/a/iTfxeSE")
+
+
