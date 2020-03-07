@@ -7,6 +7,5 @@ In the project directory, you can run:
 
 
 
-![screenshot](https://imgur.com/a/iTfxeSE.jpg)
-
+![screenshot](https://i.imgur.com/5XZ1MHq.png)
 
